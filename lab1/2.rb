@@ -1,10 +1,10 @@
-puts "Hello, #{ARGV[0]}"# массив вводимый в консоли с клавиатуры.
+puts "Привет, #{ARGV[0]}"# массив вводимый в консоли с клавиатуры.
 
-puts "Your favorite language, #{ARGV[0]}?"
+puts "Ваш любимый язык программирования, #{ARGV[0]}?"
 language = STDIN.gets.chomp #считывание входных данных
 if language == "ruby"
-    puts "you podliza"
+    puts "ты подлиза,фу"
 else
-    puts "Skoro budet ruby"
+    puts "значит скоро будет,руби"
 end
 t = STDIN.gets
