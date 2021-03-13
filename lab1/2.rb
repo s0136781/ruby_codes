@@ -8,7 +8,3 @@ else
     puts "Skoro budet ruby"
 end
 t = STDIN.gets
-<<<<<<< HEAD
-
-=======
->>>>>>> master
