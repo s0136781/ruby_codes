@@ -11,4 +11,4 @@ def digits_sum(x,q=10)
   res
 end
 
-puts digits_sum(11.4+5)
+puts digits_sum(14.4+5)
