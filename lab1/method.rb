@@ -71,6 +71,10 @@ def nums_div_three(input)
 	sum
 end
 
+def del_nums(input)
+	
+
+
 puts nums_div_three(679)
 puts simple_nums(12)
 puts max(16)
