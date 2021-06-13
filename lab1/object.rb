@@ -13,4 +13,4 @@ rex = Dog.new
 rex.name = "Rex"
 rex.age = 2
 
-puts lucy, rex
+puts lucy.to_s, rex.to_s
