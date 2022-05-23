@@ -61,12 +61,12 @@ end
 
 # Метод 1 Найти сумму непростых делителей числа.
 def method_1 num
-  (2..num).select { |i| num % i == 0 and !just i }.compact!
+  (2..num).select { |i| num % i == 0 and !just i }.compact.sum
 end
 
 # Метод 2 Найти количество цифр числа, меньших 3
 def method_2 num
-  num.to_s.each_char.select { |i| i.to_i < 3 }.size
+  num.to_s.each_char.select { |i| i.to_i < 3 }
 end
 
 # Метод 3 Найти количество чисел, не являющихся делителями исходного
@@ -74,9 +74,10 @@ end
 # цифр этого числа.
 
 # сумма цифр числа
-def sum_char num
-  num.to_s.each_char.sum { |i| i.to_i }
+def sum_just_char num
+  num.to_s.each_char.map { |i| i.to_i if just(i.to_i) }.compact.sum
 end
+
 #делители числа
 def del_num num
   (2..num.to_i).select { |i| num % i == 0 }.compact
@@ -88,11 +89,8 @@ def just_num num_1, num_2
 end
 
 def method_3 num
-  (1..num).select { |i| i.to_i != 0 and num % i.to_i != 0 and !(just_num num, i).empty? and (just_num i, (sum_char num)).empty? }
+  (1..num).select { |i| i.to_i != 0 and num % i.to_i != 0 and !(just_num num, i).empty? and (just_num i, (sum_just_char num)).empty? }
 end
 
-puts method_3 25
-puts max(16)
-puts min(16)
-puts pr(45)
-puts digits_sum(135)
+print method_1 24
+
